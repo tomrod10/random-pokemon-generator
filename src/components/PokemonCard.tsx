@@ -11,7 +11,6 @@ type PokemonCardProps = {
 
 export const PokemonCard = ({
   pokemon,
-  handleGenerate,
   isLoading
 }: PokemonCardProps) => {
   return (
@@ -20,16 +19,13 @@ export const PokemonCard = ({
         <BarLoader />
       ) : (
         <>
-          <div>
+          <div className="flex flex-col items-center">
             <h2>{pokemon.name}</h2>
           </div>
           <img alt="ditto-png" src={pokemon.image} />
           <div>
             {/* Make the stats a ul element with each stat being an li element */}
             {`Type: ${pokemon.type} HP: ${pokemon.hp} Attack: ${pokemon.attack} Defense: ${pokemon.defense}`}
-          </div>
-          <div>
-            <button onClick={handleGenerate}>Generate</button>
           </div>
         </>
       )}

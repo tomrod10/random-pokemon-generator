@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+const tailwindcss = require('tailwindcss');
+
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: ['postcss-preset-env',
+  tailwindcss],
 }
 
