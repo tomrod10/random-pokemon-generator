@@ -4,7 +4,8 @@ module.exports = {
   entry: './src/index.js',
   output:{
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index.bundle.js',
+    filename: 'index.js',
+    publicPath: "/",
   },
   devServer: {
     static: {
@@ -31,5 +32,5 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       }
     ]
-  }
+  },
 }
