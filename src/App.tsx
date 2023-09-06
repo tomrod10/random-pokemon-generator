@@ -60,15 +60,15 @@ export function App() {
   }
 
   return (
-    <div>
+    <div className="flex flex-col items-center bg-blue-700">
       <div>
         <h1>Random Pokemon Generator</h1>
       </div>
       <PokemonCard
         pokemon={pokemon}
-        handleGenerate={handleGenerate}
         isLoading={isLoading}
       />
+      <button className="bg-indigo-100" onClick={handleGenerate}>Generate</button>
     </div>
   );
 }

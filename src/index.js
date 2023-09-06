@@ -1,4 +1,5 @@
 require('file-loader?name=[name].[ext]!../public/index.html')
+import './style.css'
 
 import React from 'react'
 import reactDom from 'react-dom'
