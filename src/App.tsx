@@ -60,9 +60,9 @@ export function App() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-blue-700">
+    <div className="flex flex-col items-center">
       <div>
-        <h1>Random Pokemon Generator</h1>
+        <h1 className="text-4xl">Random Pokemon Generator</h1>
       </div>
       <PokemonCard
         pokemon={pokemon}
