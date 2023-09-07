@@ -9,6 +9,7 @@ type PokemonCardProps = {
   isLoading: boolean;
 };
 
+
 export const PokemonCard = ({
   pokemon,
   isLoading
@@ -16,16 +17,31 @@ export const PokemonCard = ({
   return (
     <div>
       {isLoading ? (
-        <BarLoader />
+        <div className="px-auto my-auto h-[555px]">
+          <BarLoader />
+        </div>
       ) : (
         <>
           <div className="flex flex-col items-center">
             <h2>{pokemon.name}</h2>
           </div>
-          <img alt="ditto-png" src={pokemon.image} />
+          <img className="h-[475px]" alt="ditto-png" src={pokemon.image} />
           <div>
             {/* Make the stats a ul element with each stat being an li element */}
-            {`Type: ${pokemon.type} HP: ${pokemon.hp} Attack: ${pokemon.attack} Defense: ${pokemon.defense}`}
+            <ul className="flex flex-row justify-between p-4">
+              <li>
+              Type: {pokemon.type}
+              </li>
+              <li>
+              HP: {pokemon.hp}
+              </li>
+              <li>
+              Attack: {pokemon.attack}
+              </li>
+              <li>
+              Defense: {pokemon.defense}
+              </li>
+            </ul>
           </div>
         </>
       )}
