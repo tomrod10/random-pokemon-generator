@@ -21,11 +21,11 @@ export const PokemonCard = ({
     <div className="flex flex-col items-center h-[554px]">
       <div>
         {isLoading ? (
-          <div className="h-[32px] flex items-center">
+          <div className="h-[32px] md:h-[36px] flex items-center">
             <BarLoader color={loaderColor} height={loaderHeight}/>
           </div>
         ) : (
-          <h2 className="text-2xl text-center">{pokemon.name}</h2>
+          <h2 className="text-2xl text-center md:text-3xl">{pokemon.name}</h2>
         )}
       </div>
       <div>
@@ -38,7 +38,7 @@ export const PokemonCard = ({
         )}
       </div>
       <div className="w-[475px] h-[56px]">
-        <ul className="flex flex-row p-4 justify-between">
+        <ul className="flex flex-row p-4 justify-between text-md md:text-xl">
           <li>
             Type: {pokemon.type}
           </li>
