@@ -18,7 +18,7 @@ export const PokemonCard = ({
   const loaderHeight = "0.5em"
   const loaderColor = "rgb(224 231 255"
   return (
-    <div className="flex flex-col items-center h-[554px] gap-4 sm:gap-0">
+    <div className="flex flex-col items-center gap-4 sm:gap-0">
       <div>
         {isLoading ? (
           <div className="h-[32px] flex items-center md:h-[36px]">
