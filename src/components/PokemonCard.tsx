@@ -18,10 +18,10 @@ export const PokemonCard = ({
   const loaderHeight = "0.5em"
   const loaderColor = "rgb(224 231 255"
   return (
-    <div className="flex flex-col items-center h-[554px]">
+    <div className="flex flex-col items-center h-[554px] gap-4 sm:gap-0">
       <div>
         {isLoading ? (
-          <div className="h-[32px] md:h-[36px] flex items-center">
+          <div className="h-[32px] flex items-center md:h-[36px]">
             <BarLoader color={loaderColor} height={loaderHeight}/>
           </div>
         ) : (
@@ -30,15 +30,15 @@ export const PokemonCard = ({
       </div>
       <div>
         {isLoading ? (
-          <div className="h-[475px] flex items-center">
+          <div className="h-[375px] flex items-center sm:h-[475px]">
             <BarLoader color={loaderColor} height={loaderHeight} width="12em"/>
           </div>
         ) : (
-          <img className="h-[475px] w-full" alt={`${pokemon.name}-png`} src={pokemon.image} />
+          <img className="h-[375px] w-full sm:h-[475px]" alt={`${pokemon.name}-png`} src={pokemon.image} />
         )}
       </div>
-      <div className="w-[475px] h-[56px]">
-        <ul className="flex flex-row p-4 justify-between text-md md:text-xl">
+      <div className="w-[370px] h-[56px] sm:w-[475px]">
+        <ul className="flex flex-row flex-wrap p-4 justify-between text-sm sm:text-lg md:text-xl">
           <li>
             Type: {pokemon.type}
           </li>
