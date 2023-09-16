@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 
-import { fetchPokemon } from "./api/api";
+import { fetchPokemon, Pokemon } from "./api/api";
 import { getRandomPokemonId } from "./utils/getRandomPokemonId";
 
 import { PokemonCard } from "./components/PokemonCard";
@@ -15,7 +15,7 @@ export function App() {
     name: "",
     message: ""
   });
-  const [pokemon, setPokemon] = useState({
+  const [pokemon, setPokemon] = useState<Pokemon>({
     name: "",
     image: "",
     type: "",
@@ -56,7 +56,7 @@ export function App() {
   }, [id]);
 
   if (error?.message) {
-    return <h1>{error?.message}</h1>;
+    return <h1 className='text-2xl text-red-500'>{error?.message}</h1>;
   }
 
   return (
