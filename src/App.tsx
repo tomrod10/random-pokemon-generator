@@ -56,7 +56,7 @@ export function App() {
   }, [id]);
 
   if (error?.message) {
-    return <h1>{error?.message}</h1>;
+    return <h1 className='text-2xl text-red-500'>{error?.message}</h1>;
   }
 
   return (

@@ -9,13 +9,13 @@ export type Pokemon = {
 
 type FetchPokemonRes = {
   response: Pokemon;
-  error?: Error | null | unknown;
+  error?: Error | null;
 };
 
 export const fetchPokemon = async (id: number): Promise<FetchPokemonRes> => {
   try {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-    if (!res.ok === true) {
+    if (!res.ok) {
       throw new Error(`Failed fetch for Pokemon with id: ${id}`);
     };
 
@@ -30,7 +30,7 @@ export const fetchPokemon = async (id: number): Promise<FetchPokemonRes> => {
     }
     return { response: pokemonData, error: null };
   } catch (error) {
-    console.error(`${error}`);
+    console.error(`Error while fetching Pokemon with ID: ${id} - ${error}`);
     return {
       response: {
         name: "",
@@ -40,7 +40,7 @@ export const fetchPokemon = async (id: number): Promise<FetchPokemonRes> => {
         attack: 0,
         defense: 0
       },
-      error
+      error: error as Error
     };
   }
 };
