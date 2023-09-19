@@ -3,18 +3,18 @@ import { BarLoader } from "react-spinners";
 
 import { Pokemon } from "../api/api";
 
-type PokemonCardProps = {
+type pokemonCardProps = {
   pokemon: Pokemon;
   handleGenerate: () => void;
   isLoading: boolean;
 };
 
 
-export const PokemonCard = ({
+export const PokemonCard: React.FC<pokemonCardProps> = ({
   pokemon,
   isLoading,
   handleGenerate
-}: PokemonCardProps) => {
+}: pokemonCardProps) => {
   const loaderHeight = "0.5em"
   const loaderColor = "rgb(224 231 255"
   return (
@@ -34,7 +34,7 @@ export const PokemonCard = ({
             <BarLoader color={loaderColor} height={loaderHeight} width="12em"/>
           </div>
         ) : (
-          <img className="h-[375px] w-full sm:h-[475px]" alt={`${pokemon.name}-png`} src={pokemon.image} />
+          <img className="h-[375px] w-full sm:h-[475px]" alt={`Image of ${pokemon.name}`} src={pokemon.image} />
         )}
       </div>
       <div className="w-[370px] h-[56px] sm:w-[475px]">
