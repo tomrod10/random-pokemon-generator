@@ -7,7 +7,7 @@ This random Pokemon generator fetches data from all the available Pokemon in the
 I wanted to learn and practice TailwindCSS and TypeScript, so I chose a simple project.
 
 ## Preview
-P.S. I have a MacBook Pro (Retina, 13-inch, Early 2015) in its last days, hence why it lags a bit on video!
+P.S. I have a MacBook Pro (Retina, 13-inch, Early 2015) on its last days, hence why it lags a bit on video!
 https://github.com/tomrod10/random-pokemon-generator/assets/63356102/b5597130-e286-49ea-95c7-0c254bfbdaa9
 
 ### Mobile
